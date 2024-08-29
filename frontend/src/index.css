@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+html {
+	letter-spacing: 0.3px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #e5e7eb;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+@layer utilities {
+	.active {
+		@apply font-medium;
+	}
+	.custom-input {
+		@apply mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:border-blue-500 sm:text-sm;
+	}
+	.nav-link {
+		@apply flex gap-1 align-middle justify-between text-gray-100 hover:text-gray-500 hover:bg-blue-gray-200 rounded-md transition ease-out;
+	}
+	.btn {
+		@apply py-2 px-6 rounded-full transition duration-200 ease-out font-semibold text-base;
+	}
+	.primary-btn {
+		@apply bg-green-500 text-white hover:bg-green-600;
+	}
+	.secondary-btn {
+		@apply bg-gray-200 text-gray-900 hover:bg-gray-300;
+	}
+	.primary-heading {
+		@apply text-gray-900 font-semibold text-4xl;
+	}
+
+	.error-box {
+		@apply w-1/2 text-center bg-red-100 font-bold text-3xl py-20 rounded-md mx-auto;
+	}
+
+	.hero-feature-box {
+		@apply max-w-xs bg-gray-800 bg-opacity-75 p-3 md:p-6 rounded-lg flex-shrink-0;
+	}
+
+	.hero-icon {
+		@apply w-8 h-8 text-yellow-900 mr-3;
+	}
+
+	.whatsApp-btn {
+		@apply fixed p-3 bottom-10 cursor-pointer right-10 bg-green-500 text-blue-gray-900 font-semibold shadow-light-green-200 rounded-full shadow-lg;
+	}
+
+	.file_uploader-img {
+		@apply w-48 h-48 object-cover rounded-md shadow-sm;
+	}
+
+	.file_uploader-box {
+		@apply text-center flex flex-col justify-center items-center;
+	}
+
+	.file_uploader-label {
+		@apply mb-2 text-orange-800;
+	}
+}
